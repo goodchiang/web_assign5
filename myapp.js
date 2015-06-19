@@ -90,7 +90,8 @@ $('#dropdown li').on('click', function(){
 
 	             $('.condition').text(weatherInfo.item.forecast[0].date);
 
-
+	             $('.range_1').text(temp_F_to_C(weatherInfo.item.forecast[i].low) +'-'+ temp_F_to_C(weatherInfo.item.forecast[i].high)
+	              
 	             for (i = 1; i < 4; i++){ 
 				 	$('."range_"+i').text(temp_F_to_C(weatherInfo.item.forecast[i].low) +'-'+ temp_F_to_C(weatherInfo.item.forecast[i].high) 
 				 }
