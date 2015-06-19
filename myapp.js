@@ -23,6 +23,7 @@ var skycons = new Skycons();
 	             $('.condition').text(weatherInfo.item.forecast[0].date);
 
 
+
 	             for (i = 1; i < 4; i++){ 
 				 	$('."range"+i').text(temp_F_to_C(weatherInfo.item.forecast[i].low) +'-'+ temp_F_to_C(weatherInfo.item.forecast[i].high) 
 				 }
@@ -85,18 +86,18 @@ $('#dropdown li').on('click', function(){
 				 var weatherInfo = data.query.results.channel;
 				 console.log(weatherInfo);
 
-	             $('.temperature').text(temp_F_to_C(weatherInfo.item.condition.temp));
+	             $('.temperature').text(temp_F_to_C(weatherInfo.condition.temp));
 
 	             $('.condition').text(weatherInfo.item.forecast[0].date);
 
 
 	             for (i = 1; i < 4; i++){ 
-				 	$('.range_i').text(temp_F_to_C(weatherInfo.item.forecast[i].low) +'-'+ temp_F_to_C(weatherInfo.item.forecast[i].high) 
+				 	$('."range_"+i').text(temp_F_to_C(weatherInfo.item.forecast[i].low) +'-'+ temp_F_to_C(weatherInfo.item.forecast[i].high) 
 				 }
 
 
 				 for (i = 1; i < 4; i++){ 
-				 	$('.range_i').text(weatherInfo.item.forecast[i].date);
+				 	$('."d_"+i').text(weatherInfo.forecast[i].date);
 				 }
 
 
