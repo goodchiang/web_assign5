@@ -85,13 +85,14 @@ $('#dropdown li').on('click', function(){
 
 				 var weatherInfo = data.query.results.channel;
 				 console.log(weatherInfo);
-
+				 $('.temperature').text(((weatherInfo.item.condition.temp-32)*5/9).toFixed(1));
+				 
 	             $('.temperature').text(temp_F_to_C(weatherInfo.condition.temp));
 
 	             $('.condition').text(weatherInfo.item.forecast[0].date);
 
 	             $('.range_1').text(temp_F_to_C(weatherInfo.item.forecast[i].low) +'-'+ temp_F_to_C(weatherInfo.item.forecast[i].high)
-	              
+
 	             for (i = 1; i < 4; i++){ 
 				 	$('."range_"+i').text(temp_F_to_C(weatherInfo.item.forecast[i].low) +'-'+ temp_F_to_C(weatherInfo.item.forecast[i].high) 
 				 }
